@@ -1,0 +1,37 @@
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.08em}
+.brand svg{width:34px;height:34px}
+.top-actions{display:flex;gap:8px;flex-wrap:wrap}
+.profile{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;margin-bottom:22px}
+.profile .name{font-size:28px;font-weight:700}
+.rank{color:var(--purple);font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.stat{background:#0a1322;border:1px solid var(--border);border-radius:12px;padding:10px 12px}
+.stat b{display:block;font-family:var(--mono);font-size:22px;color:var(--cyan)}
+.stat span{font-size:12px;color:var(--text2)}
+.section-title{display:flex;align-items:center;gap:10px;margin:26px 0 12px;font-size:20px}
+.missions{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.mcard{position:relative;display:flex;flex-direction:column;gap:10px;transition:transform .2s,border-color .2s,box-shadow .2s}
+.mcard:hover:not(.locked){transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 14px 40px #50e3e61f}
+.mcard .num{font-family:var(--mono);color:var(--text2);font-size:12px;letter-spacing:.12em}
+.mcard .mic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#50e3e622,#6b8cff22);border:1px solid #50e3e655;color:var(--cyan)}
+.mcard .mic svg{width:28px;height:28px}
+.mcard h3{margin:0;font-size:20px}
+.mcard .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.mcard.locked{opacity:.6}
+.mcard.locked .mic{color:var(--text2);border-color:var(--border);background:#0a1322}
+.mcard.completed{border-color:#5ce1a366}
+.mcard.completed .mic{color:var(--green);border-color:#5ce1a366}
+.mcard .foot{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}
+.status{font-family:var(--mono);font-size:11px;letter-spacing:.12em;padding:3px 9px;border-radius:999px;border:1px solid}
+.status.AVAILABLE{color:var(--cyan);border-color:#50e3e666}.status.PROGRESS{color:var(--amber);border-color:#ffca7066}.status.COMPLETED{color:var(--green);border-color:#5ce1a366}.status.LOCKED{color:var(--text2);border-color:var(--border)}
+.badges{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.badge{display:flex;gap:12px;align-items:center;padding:12px;border-radius:12px;border:1px solid var(--border);background:#0a1322}
+.badge .bic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--border);color:var(--text2);flex:none}
+.badge .bic svg{width:22px;height:22px}
+.badge.earned{border-color:#a78bfa88;background:linear-gradient(135deg,#a78bfa18,#0a1322)}
+.badge.earned .bic{color:var(--purple);border-color:var(--purple);box-shadow:0 0 14px #a78bfa44}
+.badge small{color:var(--text2);display:block;line-height:1.3}
+.badge b{font-family:var(--mono);font-size:12px;letter-spacing:.08em}
+.final-card{display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:space-between;border-color:#a78bfa66}
+.rank-bar{margin-top:10px}

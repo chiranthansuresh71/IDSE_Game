@@ -1,0 +1,19 @@
+@media (max-width:900px){
+  .profile{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .screen{padding:14px 12px 50px}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .stat b{font-size:18px}
+  .missions{grid-template-columns:1fr}
+  .panel{padding:14px}
+  .orow{grid-template-columns:1fr}
+  .bar-row{grid-template-columns:90px 1fr 56px}
+  .chart-box{height:260px}
+  .btn{font-size:15px}
+  .modal{padding:16px}
+  .answer-row .field{width:100%}
+  .answer-row input{width:100%}
+}
+@media (min-width:1400px){ .screen{max-width:1280px} }

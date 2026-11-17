@@ -1,0 +1,24 @@
+@keyframes scan{from{top:-120px}to{top:100vh}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideIn{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes shake{0%,100%{transform:none}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+@keyframes pop{0%{transform:scale(.9);opacity:0}60%{transform:scale(1.06)}100%{transform:scale(1);opacity:1}}
+@keyframes glowPulse{0%,100%{box-shadow:0 0 0 0 #5ce1a300}50%{box-shadow:0 0 0 8px #5ce1a333}}
+@keyframes blink{50%{opacity:0}}
+@keyframes floatUp{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-50px)}}
+@keyframes scanBar{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.screen.enter{animation:rise .45s ease both}
+.shake{animation:shake .4s}
+.pop{animation:pop .45s ease both}
+.glow-ok{animation:glowPulse 1.2s ease 2}
+.cursor::after{content:"▍";color:var(--cyan);animation:blink 1s steps(2) infinite}
+.xp-float{position:fixed;z-index:180;font-family:var(--mono);font-weight:700;color:var(--green);pointer-events:none;animation:floatUp 1.2s ease forwards;font-size:22px;text-shadow:0 0 12px #5ce1a3}
+.scanning{position:relative;overflow:hidden}
+.scanning::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,#50e3e633,transparent);animation:scanBar 1.4s ease-in-out 2;pointer-events:none}
+.reduce-motion *,.reduce-motion *::before,.reduce-motion *::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important;scroll-behavior:auto!important}
+.reduce-motion .scanline,.reduce-motion #bg-canvas{display:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important;scroll-behavior:auto!important}
+  .scanline,#bg-canvas{display:none}
+}

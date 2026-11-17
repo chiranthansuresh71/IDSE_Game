@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DATA LOCKDOWN — Crack the Data Mystery</title>
+<meta name="description" content="DATA LOCKDOWN is an educational detective puzzle game that teaches data science by playing.">
+<link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/welcome.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/game.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip-link" href="#app">Skip to game</a>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="scanline" aria-hidden="true"></div>
+<div id="sr-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+<div id="toast-root" aria-hidden="false"></div>
+<div id="modal-root"></div>
+
+<main id="app" tabindex="-1">
+  <!-- SCREEN 1: WELCOME -->
+  <section id="screen-welcome" class="screen" aria-labelledby="game-title">
+    <div class="welcome">
+      <img class="logo-mark" src="assets/images/logo.svg" alt="">
+      <div class="sub">Nova City · Data Investigation Unit</div>
+      <h1 id="game-title">DATA LOCKDOWN</h1>
+      <div class="sub">Crack the Data Mystery</div>
+      <p class="tagline">Every dataset hides a secret. Can you find the truth?</p>
+      <p class="story">An unidentified breach has corrupted Nova City's central database. Records are missing, statistics are misleading and the city's predictions are failing. Join the Data Investigation Unit as a junior data scientist and restore the system, one investigation at a time.</p>
+      <form id="start-form" class="panel start-card" autocomplete="off">
+        <div class="panel-title">Agent registration</div>
+        <div class="field">
+          <label for="player-name">Detective name</label>
+          <input id="player-name" type="text" maxlength="20" placeholder="e.g. Arjun" class="mono" required aria-describedby="name-err">
+          <small id="name-err" class="muted" role="alert"></small>
+        </div>
+        <div class="start-actions">
+          <button class="btn primary" type="submit" id="btn-start">START INVESTIGATION</button>
+          <button class="btn" type="button" id="btn-howto">HOW TO PLAY</button>
+        </div>
+      </form>
+      <div class="credits">
+        <span>DATA LOCKDOWN · Introduction to Data Science project</span>
+        <button class="btn ghost small" id="btn-sound-welcome" type="button" aria-pressed="false">Sound: off</button>
+      </div>
+      <div class="credits"><span>Built with HTML, CSS, vanilla JavaScript &amp; Chart.js · Sounds generated in-browser (original)</span></div>
+    </div>
+  </section>
+  <section id="screen-dashboard" class="screen" hidden></section>
+  <section id="screen-mission" class="screen" hidden></section>
+  <section id="screen-victory" class="screen" hidden></section>
+</main>
+
+<noscript><p style="padding:20px">DATA LOCKDOWN needs JavaScript enabled.</p></noscript>
+
+<!-- Chart.js (CDN). If it cannot load, js/charts.js falls back to a built-in canvas renderer so the game still works offline. -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" onerror="window.__chartjsFailed=true"></script>
+<script src="js/data/datasets.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/state-manager.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/components.js"></script>
+<script src="js/arcade.js"></script>
+<script src="js/sound.js"></script>
+<script src="js/scoring.js"></script>
+<script src="js/achievements.js"></script>
+<script src="js/missions/mission-1.js"></script>
+<script src="js/missions/mission-2.js"></script>
+<script src="js/missions/mission-3.js"></script>
+<script src="js/missions/mission-4.js"></script>
+<script src="js/missions/mission-5.js"></script>
+<script src="js/missions/final.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/game-engine.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
